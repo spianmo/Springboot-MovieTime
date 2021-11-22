@@ -1,0 +1,56 @@
+/**
+ * Copyright (c) 2021
+ * @Project: SpringbootDemo
+ * @Author: Finger
+ * @FileName: build.gradle
+ * @LastModified: 2021/11/22 08:25:22
+ */
+
+plugins {
+    id 'org.springframework.boot' version '2.5.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.kirito.springboot'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc:2.5.6'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc:2.5.6'
+    implementation 'org.springframework.boot:spring-boot-starter-validation:2.5.6'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.6'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+    implementation 'com.github.pagehelper:pagehelper-spring-boot-starter:1.4.0'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis:2.5.6'
+    implementation 'org.apache.commons:commons-pool2:2.10.0'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    runtimeOnly 'mysql:mysql-connector-java:8.0.25'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor:2.5.6'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.6'
+    testImplementation 'org.projectlombok:lombok:1.18.22'
+    implementation group: 'com.baomidou', name: 'mybatis-plus-boot-starter', version: '3.4.3.4'
+    implementation group: 'com.github.pagehelper', name: 'pagehelper', version: '5.3.0'
+    implementation group: 'com.aliyun.oss', name: 'aliyun-sdk-oss', version: '3.13.0'
+    implementation 'cn.hutool:hutool-all:5.7.16'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
+    implementation group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.4'
+    implementation group: 'org.jetbrains', name: 'annotations', version: '20.1.0'
+    annotationProcessor group: 'org.jetbrains', name: 'annotations', version: '20.1.0'
+}
+
+test {
+    useJUnitPlatform()
+}

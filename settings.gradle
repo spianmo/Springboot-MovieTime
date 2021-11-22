@@ -1,0 +1,9 @@
+/**
+ * Copyright (c) 2021
+ * @Project: SpringbootDemo
+ * @Author: Finger
+ * @FileName: settings.gradle
+ * @LastModified: 2021/11/10 15:33:10
+ */
+
+rootProject.name = 'SpringbootDemo'
